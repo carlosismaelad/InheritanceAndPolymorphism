@@ -1,7 +1,7 @@
 namespace SobrepositionVirtualOverride.Entities;
 
 
-public class SavingsAccount : Account
+class SavingsAccount : Account
 {
     public double InterestRate { get; set; }
 
@@ -20,7 +20,7 @@ public class SavingsAccount : Account
         Balance += Balance * InterestRate;
     }
 
-    public override void Withdraw(double amount)
+    public sealed override void Withdraw(double amount) // evitando que o método seja sobreposto novamente
     {
         base.Withdraw(amount);
         Balance -= 3.0;

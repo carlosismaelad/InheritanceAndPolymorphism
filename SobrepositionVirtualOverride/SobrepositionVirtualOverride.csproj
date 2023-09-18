@@ -8,4 +8,8 @@
   </PropertyGroup>
 
 
+  <ItemGroup>
+    <Compile Remove="Entities\SavingsAccountPlus.cs" />
+  </ItemGroup>
+
 </Project>
